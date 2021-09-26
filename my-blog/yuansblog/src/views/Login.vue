@@ -9,19 +9,22 @@
                         <a href="" class="change-btn" :class="flag ? 'clicked-style' : ''"
                             @click.prevent="changeToRegister">注册</a>
                     </div>
+
                     <login-form v-show="!flag"></login-form>
                     <register-form v-show="flag"></register-form>
 
-                    <div class="signpage-tip">
-                        <p>注册、登录本网站即代表同意</p><a class="tip-text">《隐私保护协议》</a>
-                    </div>
+                    <div class="bottom-box">
+                        <div class="signpage-tip">
+                            <p>注册、登录本网站即代表同意</p><a class="tip-text">《隐私保护协议》</a>
+                        </div>
 
-                    <el-divider></el-divider>
-                    <div class="social-login">
-                        <p>其他方式登录</p>
-                        <div class="social-box">
-                            <div class="social-item"><i class="fa fa-weixin" aria-hidden="true"></i>微信</div>
-                            <div class="social-item"><i class="fa fa-qq" aria-hidden="true"></i>QQ</div>
+                        <el-divider></el-divider>
+                        <div class="social-login">
+                            <p>其他方式登录</p>
+                            <div class="social-box">
+                                <div class="social-item"><i class="fa fa-weixin" aria-hidden="true"></i> 微信</div>
+                                <div class="social-item"><i class="fa fa-qq" aria-hidden="true"></i> QQ</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -81,6 +84,7 @@ export default {
 }
 
 .signpage-box {
+  position: relative;
   box-sizing: border-box;
   /* min-height: 480px; */
   width: 380px;
@@ -142,7 +146,6 @@ export default {
 }
 
 .social-box .social-item {
-    width: 50px;
     height: 15px;
     padding-right: 10px;
     line-height: 15px;
@@ -153,8 +156,10 @@ export default {
     color: black;
 }
 
-.signpage-tip {
-    margin-top: 50px;
+.bottom-box {
+    position: absolute;
+    bottom: 20px;
+    width: 340px;
 }
 
 /* 分割线样式 */

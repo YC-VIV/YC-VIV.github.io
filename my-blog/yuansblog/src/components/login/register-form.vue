@@ -2,7 +2,7 @@
     <div>
         <el-form :rules="registerRules" ref="registerForm" :model="registerForm">
             <el-form-item prop="userName">
-                <el-input prefix-icon="el-icon-user" v-model="registerForm.userName" placeholder="请输入账号名"></el-input>
+                <el-input prefix-icon="el-icon-user" v-model="registerForm.userName" placeholder="请输入账号"></el-input>
             </el-form-item>
             <el-form-item prop="userPasswork">
                 <el-input prefix-icon="el-icon-key" v-model="registerForm.userPasswork"  placeholder="请输入密码" show-password></el-input>
